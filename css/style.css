@@ -258,9 +258,6 @@ body {
   @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem; } }
-  @media only screen and (max-width: 37.5em) {
-    .row {
-      max-width: 50rem; } }
   .row [class^="col"] {
     float: left; }
     @media only screen and (max-width: 56.25em) {
@@ -268,6 +265,9 @@ body {
         margin-bottom: 4rem; } }
     .row [class^="col"]:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col"]:not(:last-child) {
+          margin-right: 0; } }
 
 .col-1-of-2 {
   width: calc((100% - 6rem) / 2); }
@@ -867,7 +867,6 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 55%, transparent 55%, transparent 100%), url(../img/nat-10-3.jpg);
   background-size: cover;
   background-position: center;
-  width: 95%;
   margin: 0 auto;
   padding: 2rem 0;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
@@ -886,7 +885,6 @@ body {
       height: auto; } }
 
 .form {
-  height: 55rem;
   width: 50%;
   padding-left: 5rem; }
   @media only screen and (max-width: 56.25em) {
@@ -908,7 +906,7 @@ body {
   .form__text {
     outline: none;
     border: none;
-    line-height: 3.5rem;
+    line-height: 4rem;
     width: 95%;
     padding-left: 2rem;
     border-bottom: 3px solid transparent;
@@ -941,9 +939,9 @@ body {
   .form__email {
     position: relative; }
   .form__radio-1 {
+    float: left;
     display: inline-block;
     width: 50%;
-    float: left;
     margin: 2rem 0;
     position: relative; }
     @media only screen and (max-width: 56.25em) {
@@ -965,7 +963,8 @@ body {
   .form__radio-label {
     display: block;
     margin-left: 4rem;
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
     .form__radio-label::before, .form__radio-label::after {
       content: "";
       border-radius: 50%;
