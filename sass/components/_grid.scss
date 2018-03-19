@@ -4,10 +4,16 @@
   max-width: $grid-width;
   margin: 0 auto;
   @include clearfix;
+  
+  @include breakpoint(tab-land) {
+    padding: 0 2rem;
+
+  }
 
 
   @include breakpoint(tab-port) {
     max-width: 50rem;
+
   }
 
 

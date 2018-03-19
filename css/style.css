@@ -255,6 +255,9 @@ body {
     content: "";
     clear: both;
     display: table; }
+  @media only screen and (max-width: 75em) {
+    .row {
+      padding: 0 2rem; } }
   @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem; } }
@@ -513,7 +516,7 @@ body {
 .about__picture--2 {
   position: absolute;
   top: 4rem;
-  right: 0; }
+  right: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .about__picture--2 {
       z-index: 1;
@@ -524,7 +527,7 @@ body {
 .about__picture--3 {
   position: absolute;
   top: 12.5rem;
-  right: 23%; }
+  right: 27%; }
   @media only screen and (max-width: 56.25em) {
     .about__picture--3 {
       top: 1.5rem;

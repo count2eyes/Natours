@@ -73,7 +73,7 @@
   &__picture--2 {
     position: absolute;
     top: 4rem;
-    right: 0;
+    right: 2rem;
     
     @include breakpoint(tab-port) {
       z-index: 1;
@@ -87,7 +87,7 @@
   &__picture--3 {
     position: absolute;
     top: 12.5rem;
-    right: 23%;
+    right: 27%;
     
     @include breakpoint(tab-port) {
       top: 1.5rem;
