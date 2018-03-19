@@ -143,8 +143,7 @@
   &__radio {
   }
   
-  &__radio-1,
-  &__radio-2 {
+  &__radio-1 {
     display: inline-block;
     width: 50%;
     float: left;
@@ -157,59 +156,64 @@
     }
   }
 
+  &__radio-2 {
+    display: inline-block;
+    width: 50%;
+    margin: $margin-top-bottom-small;
+    position: relative;
+
+    @include breakpoint(tab-port) {
+      margin: $margin-top-bottom-smaller;
+    }
+  }
+
   
   
-  &__radio-btn{
+  &__radio-btn {
     display: none;
 
     &:checked ~ label::after {
-      background-color: $color-primary;
+      opacity: 1;
     }
+
   }
     
   
   &__radio-label {
     display: block;
     margin-left: 4rem;
-    width: 100%;
+    width: 100%; 
     
     
-    &::before {
+    &::before,
+    &::after {
       content: "";
-      width: 3rem;
-      height: 3rem;
       border-radius: 50%;
       display: inline-block;
-      background: transparent;
-      border: .6rem solid $color-primary;
       position: absolute;
       top: 0;
       left: 0;
-      transform: translate(-50%, -20%);
       margin-left: 1.5rem;
-      
+     
+    }
+    &::before {
+      width: 3rem;
+      height: 3rem;
+      border: .6rem solid $color-primary;
+      transform: translate(-50%, -20%);
+  
     }
     
     &::after {
-      content: "";
-      width: 1.3rem;
       height: 1.3rem;
-      border-radius: 50%;
-      display: inline-block;
-      background: transparent;
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 1.3rem;
       transform: translate(-50%, 20%);
-      margin-left: 1.5rem;
+      background-color: $color-primary;
+      opacity: 0;
+      transition: opacity .4s;
     }
   }
-  
 
-    
-  
-  
-  
   &-btn {
 
     margin: 4rem auto;

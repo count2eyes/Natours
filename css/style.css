@@ -118,7 +118,7 @@ body {
       letter-spacing: 1px; } }
   .heading-tertiary:hover {
     transform: skew(8deg, 2deg) scale(1.1);
-    text-shadow: 0 1rem 3rem rgba(0, 96, 100, 0.2); }
+    text-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4); }
 
 .para-heading {
   text-transform: uppercase;
@@ -940,49 +940,52 @@ body {
     font-size: 1.2rem; }
   .form__email {
     position: relative; }
-  .form__radio-1, .form__radio-2 {
+  .form__radio-1 {
     display: inline-block;
     width: 50%;
     float: left;
     margin: 2rem 0;
     position: relative; }
     @media only screen and (max-width: 56.25em) {
-      .form__radio-1, .form__radio-2 {
+      .form__radio-1 {
         float: none;
+        margin: 1.5rem 0; } }
+  .form__radio-2 {
+    display: inline-block;
+    width: 50%;
+    margin: 2rem 0;
+    position: relative; }
+    @media only screen and (max-width: 56.25em) {
+      .form__radio-2 {
         margin: 1.5rem 0; } }
   .form__radio-btn {
     display: none; }
     .form__radio-btn:checked ~ label::after {
-      background-color: #00c2cc; }
+      opacity: 1; }
   .form__radio-label {
     display: block;
     margin-left: 4rem;
     width: 100%; }
-    .form__radio-label::before {
+    .form__radio-label::before, .form__radio-label::after {
       content: "";
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 1.5rem; }
+    .form__radio-label::before {
       width: 3rem;
       height: 3rem;
-      border-radius: 50%;
-      display: inline-block;
-      background: transparent;
       border: 0.6rem solid #00c2cc;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(-50%, -20%);
-      margin-left: 1.5rem; }
+      transform: translate(-50%, -20%); }
     .form__radio-label::after {
-      content: "";
-      width: 1.3rem;
       height: 1.3rem;
-      border-radius: 50%;
-      display: inline-block;
-      background: transparent;
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 1.3rem;
       transform: translate(-50%, 20%);
-      margin-left: 1.5rem; }
+      background-color: #00c2cc;
+      opacity: 0;
+      transition: opacity .4s; }
   .form-btn {
     margin: 4rem auto; }
 
