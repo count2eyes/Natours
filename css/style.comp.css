@@ -41,6 +41,9 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (min-width: 160em) {
+    html {
+      font-size: 100%; } }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 75%; } }
@@ -60,7 +63,7 @@ html {
 body {
   box-sizing: border-box;
   font-size: 1.6rem;
-  color: rgba(23, 113, 117, 0.95);
+  color: rgba(81, 89, 90, 0.95);
   font-family: 'Lato', sans-serif;
   padding: 2.5rem;
   background-color: #fff; }
@@ -120,11 +123,11 @@ body {
 .para-heading {
   text-transform: uppercase;
   font-size: 1.6rem;
-  color: #177175;
+  color: #51595a;
   margin: 2rem 0; }
 
 .para-text {
-  color: #177175;
+  color: #51595a;
   line-height: 1.7;
   margin: 2rem 0; }
 
@@ -154,7 +157,7 @@ body {
     text-decoration: none;
     color: red; }
     .button-primary > a:visited, .button-primary > a:link {
-      color: #177175; }
+      color: #51595a; }
   .button-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
@@ -323,7 +326,13 @@ body {
       left: 50%;
       transform: translate(-50%, -50%) rotate(-135deg); }
   .nav__checkbox:checked ~ .nav__behind {
-    transform: scale(100); }
+    transform: scale(70); }
+    @media only screen and (min-width: 112.5em) {
+      .nav__checkbox:checked ~ .nav__behind {
+        transform: scale(85); } }
+    @media only screen and (min-width: 3200px) {
+      .nav__checkbox:checked ~ .nav__behind {
+        transform: scale(125); } }
   .nav__checkbox:checked ~ .nav__ul {
     opacity: 1;
     visibility: visible;
@@ -344,7 +353,7 @@ body {
   .nav__span {
     height: 2px;
     width: 45%;
-    background: #177175;
+    background: #51595a;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -353,7 +362,7 @@ body {
       content: "";
       height: 2px;
       width: 100%;
-      background: #177175;
+      background: #51595a;
       position: absolute;
       top: -.8rem;
       left: 50%;
@@ -363,7 +372,7 @@ body {
       content: "";
       height: 2px;
       width: 100%;
-      background: #177175;
+      background: #51595a;
       position: absolute;
       top: .8rem;
       left: 50%;
@@ -862,10 +871,11 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 55%, transparent 55%, transparent 100%), url(../img/nat-10-3.jpg);
   background-size: cover;
   background-position: center;
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
   padding: 2rem 0;
-  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4); }
+  box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 3px; }
   @media (min-resolution: 192dpi) and (min-width: 56.25em), (min-width: 56.25em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 56.25em) {
     .form__holder {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 55%, transparent 55%, transparent 100%), url(../img/nat-10-3.jpg); } }
@@ -906,13 +916,13 @@ body {
     width: 95%;
     padding-left: 2rem;
     border-bottom: 3px solid transparent;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
     color: inherit; }
     .form__text::-webkit-input-placeholder {
-      color: rgba(23, 113, 117, 0.8);
+      color: rgba(81, 89, 90, 0.8);
       font-size: 1.6rem; }
       .form__text::-webkit-input-placeholder::input-placeholder {
-        color: rgba(23, 113, 117, 0.6); }
+        color: rgba(81, 89, 90, 0.6); }
     @media only screen and (max-width: 56.25em) {
       .form__text {
         margin: 1.5rem 0; } }
@@ -1121,7 +1131,7 @@ body {
         float: none;
         width: 100%; } }
   .sub__close:visited {
-    color: rgba(23, 113, 117, 0.95); }
+    color: rgba(81, 89, 90, 0.95); }
   .sub__close:hover {
     color: #00c2cc; }
   .sub__close-span {
@@ -1135,12 +1145,14 @@ body {
     @media only screen and (max-width: 56.25em) {
       .sub__close-span {
         top: auto;
-        bottom: 3rem;
         right: 3rem; } }
   .sub__para-text {
     font-size: 1.4rem;
     column-count: 2;
     column-gap: 3rem;
-    column-rule: 1px solid rgba(23, 113, 117, 0.15); }
+    column-rule: 1px solid rgba(81, 89, 90, 0.15); }
+    @media only screen and (max-width: 37.5em) {
+      .sub__para-text {
+        column-count: 1; } }
   .sub-btn {
     padding: 2rem 0; }

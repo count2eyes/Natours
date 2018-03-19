@@ -20,7 +20,7 @@
       width: 100%;
     }
 
-    &:hover > .about__img-hero:not(:hover) {
+    &:hover > picture > .about__img-hero:not(:hover) {
       transform: scale(0.9);
       box-shadow: 0 1rem 3rem rgba(black, 0.6);
 

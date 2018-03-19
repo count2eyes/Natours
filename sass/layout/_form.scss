@@ -1,9 +1,9 @@
 .section-form {
-  padding: 15rem 0;
+  padding: 5rem 0;
   background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
-
+  //height: 65rem;
   @include breakpoint(tab-port) {
-    padding: 10rem 0;
+    //padding: 5rem 0;
   }
 }
 
@@ -11,10 +11,11 @@
   background-image: linear-gradient(105deg, rgba($color-white, .8) 55%, transparent 55% , transparent 100%), url(../img/nat-10-3.jpg);
   background-size: cover;
   background-position: center;
-  width: 80%;
+  width: 95%;
   margin: 0 auto;
   padding: 2rem 0;
   box-shadow: 0 1rem 4rem rgba(black, .4);
+  border-radius: 3px;
   
   @media (min-resolution: 192dpi) and (min-width: 56.25em),
 	(min-width: 56.25em),
@@ -40,7 +41,7 @@
 
 
 .form {
-  height: 60rem;
+  height: 55rem;
   width: 50%;
   padding-left: 5rem;
   
@@ -78,11 +79,11 @@
   &__text {
     outline: none;
     border: none;
-    line-height: 5rem;
+    line-height: 3.5rem;
     width: 95%;
     padding-left: 2rem;
     border-bottom: 3px solid transparent;
-    margin: $margin-top-bottom-small;
+    margin: $margin-top-bottom-smaller;
     color: inherit;
 
     &::-webkit-input-placeholder {
@@ -96,7 +97,7 @@
         color: rgba($color-grey-dark, .6);
           
       @include breakpoint(phone) {
-        //font-size: 1.6rem;
+        //font-size: 1.6rem; 
       }
     }
 
@@ -142,7 +143,8 @@
   &__radio {
   }
   
-  &__radio-1 {
+  &__radio-1,
+  &__radio-2 {
     display: inline-block;
     width: 50%;
     float: left;
@@ -154,18 +156,7 @@
       margin: $margin-top-bottom-smaller;
     }
   }
-  
-  &__radio-2 {
-    display: inline-block;
-    width: 50%;
-    margin: $margin-top-bottom-small;
-    position: relative;
 
-    @include breakpoint(tab-port) {
-      margin: $margin-top-bottom-smaller;
-
-    }
-  }
   
   
   &__radio-btn{
