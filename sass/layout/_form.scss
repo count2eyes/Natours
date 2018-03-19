@@ -1,0 +1,231 @@
+.section-form {
+  padding: 15rem 0;
+  background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
+
+  @include breakpoint(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.form__holder {
+  background-image: linear-gradient(105deg, rgba($color-white, .8) 55%, transparent 55% , transparent 100%), url(../img/nat-10-3.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  box-shadow: 0 1rem 4rem rgba(black, .4);
+  
+  @media (min-resolution: 192dpi) and (min-width: 56.25em),
+	(min-width: 56.25em),
+	(-webkit-min-device-pixel-ratio: 2) and (min-width: 56.25em) {
+    background-image: linear-gradient(105deg, rgba($color-white, .8) 55%, transparent 55% , transparent 100%), url(../img/nat-10-3.jpg);
+    
+  }
+
+ 
+  
+  @include breakpoint(tab-port) {
+    background-image: linear-gradient(to right, rgba($color-white, .8), rgba($color-white, .8)), url(../img/nat-10-900.jpg);
+    height: auto;
+    max-width: 50rem;
+    
+  }
+  
+  @include breakpoint(phone) {
+    min-width: 70%;
+    height: auto;
+  }
+}
+
+
+.form {
+  height: 60rem;
+  width: 50%;
+  padding-left: 5rem;
+  
+  @include breakpoint(tab-port) {
+    padding-left: 6rem;
+    width: 95%;
+    height: auto;
+
+  }
+  
+  &__input {
+  }
+  
+  .form-heading-div {
+    padding: 5rem 0 3.5rem 0;
+    
+    @include breakpoint(tab-port) {
+      width: 80%;
+      padding: 4rem 0 3rem 0;
+    }
+
+    @include breakpoint(phone) {
+      width: 100%;
+      
+    }
+  }
+
+  &-heading {
+  }
+  
+  &__name {
+    position: relative;
+  }
+  
+  &__text {
+    outline: none;
+    border: none;
+    line-height: 5rem;
+    width: 95%;
+    padding-left: 2rem;
+    border-bottom: 3px solid transparent;
+    margin: $margin-top-bottom-small;
+    color: inherit;
+
+    &::-webkit-input-placeholder {
+      color: rgba($color-grey-dark, .8);
+      font-size: 1.6rem;
+
+      @include breakpoint(phone) {
+      }
+      
+      &::input-placeholder {
+        color: rgba($color-grey-dark, .6);
+          
+      @include breakpoint(phone) {
+        //font-size: 1.6rem;
+      }
+    }
+
+    }
+    
+    @include breakpoint(tab-port) {
+      margin: $margin-top-bottom-smaller;
+
+    }
+
+    &:placeholder-shown ~ label {
+      transform: translateY(-300%);
+      visibility: hidden;
+      opacity: 0;
+    }
+    
+    &:focus {
+      border-bottom: 3px solid orangered;
+      
+    } 
+    
+    &:valid {
+      border-bottom: 3px solid $color-primary;
+    }
+  }  
+  
+
+  &__label {
+    display: inline-block;    
+    margin-left: 1.8rem;
+    opacity: 1;
+    transform: translateY(-50%);
+    visibility: visible;
+    transition: all .4s;
+    font-size: 1.2rem;
+    
+  }
+  
+  &__email {
+    position: relative;
+  }
+  
+  &__radio {
+  }
+  
+  &__radio-1 {
+    display: inline-block;
+    width: 50%;
+    float: left;
+    margin: $margin-top-bottom-small;
+    position: relative;
+
+    @include breakpoint(tab-port) {
+      float: none;
+      margin: $margin-top-bottom-smaller;
+    }
+  }
+  
+  &__radio-2 {
+    display: inline-block;
+    width: 50%;
+    margin: $margin-top-bottom-small;
+    position: relative;
+
+    @include breakpoint(tab-port) {
+      margin: $margin-top-bottom-smaller;
+
+    }
+  }
+  
+  
+  &__radio-btn{
+    display: none;
+
+    &:checked ~ label::after {
+      background-color: $color-primary;
+    }
+  }
+    
+  
+  &__radio-label {
+    display: block;
+    margin-left: 4rem;
+    width: 100%;
+    
+    
+    &::before {
+      content: "";
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: inline-block;
+      background: transparent;
+      border: .6rem solid $color-primary;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -20%);
+      margin-left: 1.5rem;
+      
+    }
+    
+    &::after {
+      content: "";
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      display: inline-block;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, 20%);
+      margin-left: 1.5rem;
+    }
+  }
+  
+
+    
+  
+  
+  
+  &-btn {
+
+    margin: 4rem auto;
+  }
+  
+  &__button {
+  
+  }
+}
+

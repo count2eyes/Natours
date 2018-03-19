@@ -1,0 +1,53 @@
+@keyframes to-right {
+    0% {
+        transform: translateX(-30%);
+    }
+
+    90% {
+        transform: translateX(10%);
+
+    }
+
+    100% {
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes to-left {
+    0% {
+        transform: translateX(30%);
+    }
+
+    90% {
+        transform: translateX(-10%);
+
+    }
+
+    100% {
+        transform: translateX(0);
+
+    }
+}
+
+@keyframes to-up {
+    0% {
+        transform: translateY(90%);
+    }
+
+    
+    100% {
+        transform: translateY(0);
+
+    }
+}
+
+// @keyframes lis-hover-bg {
+//     0% {
+//         background-position: 0;
+//     }
+    
+//     100% {
+//         background-position: -100%;
+//     }
+// }

@@ -1,0 +1,137 @@
+.section-story {
+  background-color: rgba($color-white, .4);
+  margin: 10rem 0;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  opacity: .3;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  
+& > video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+}
+
+.story {
+  position: relative; 
+  padding-top: 8rem;
+  padding-bottom: 10rem;
+
+  @include breakpoint(tab-port) {
+    padding-top: 6rem;
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint(phone) {
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+  }
+
+
+  &__container {
+    background-color: rgba($color-white, .8);
+    padding: 5rem;
+    transform: skewX(-10deg);
+    width: 80%;
+    margin: 3.5rem auto;
+
+    @include breakpoint(tab-port) {
+      width: 90%;
+    }
+
+    @include breakpoint(phone) {
+      transform: skewX(0);
+    }
+    
+    &:hover .story__hero-pic {
+      filter: brightness(.8)  blur(3px);
+      transform: translate(-3.5rem, 0) scale(1.1);
+
+    } 
+
+    &:hover .story__hero-name {
+      top: 50%; 
+      left: 50%;
+      opacity: 1;
+    }
+  }
+  
+  &__starts {
+    transform: skewX(10deg);
+
+    @include breakpoint(phone) {
+      transform: skewX(0);
+    }
+  }
+  
+  &__pic {
+    
+    position: relative;
+    float: left;
+    text-align: center;
+    margin-right: 3rem; 
+    overflow: hidden;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    
+    @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0))
+    {
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-shape-outside: circle(50% at 50% 50%);
+      shape-outside: circle(50% at 50% 50%);  
+      
+    }
+    
+ 
+ 
+  }
+  
+  
+  &__hero-pic {
+    height: 100%;
+    backface-visibility: hidden;
+    transform: translate(-3.5rem, 0) scale(1.4);
+    transition: all .4s;
+  }
+  
+  &__hero-name{
+    color: $color-grey-light-1;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .4s;
+    text-transform: uppercase;
+    opacity: 0;
+    
+  }
+  
+  &__details {
+
+  }
+  
+  &__title {
+  
+  }
+  
+  &__description {
+
+  }
+
+  &__btn {
+    margin: $margin-top-bottom auto;
+  }
+}
+

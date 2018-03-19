@@ -1,0 +1,126 @@
+.section-features {
+  padding: $padding-top-bottom-big;
+
+  
+}
+
+
+.features {
+  //height: 85vh;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.7)), url(../img/nat-4-low.jpg);
+  background-size: cover;
+  background-position: center;
+  
+  @supports (clip-path: polygon(0 0)) {
+    -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    
+  }
+  
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+	(min-width: 75em),
+	(-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em){
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.7)), url(../img/nat-4.jpg);
+
+  }
+
+  @include breakpoint(tab-port) {
+    -webkit-clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+    clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+    height: auto;
+    
+    @supports (clip-path: polygon(0 0)) {
+      -webkit-clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+      clip-path: polygon(0 7%, 100% 0, 100% 93%, 0 100%);
+
+    }
+
+  }
+
+  @include breakpoint(phone-small) {
+    -webkit-clip-path: none;
+    clip-path: none;
+
+  }
+
+  &__container {
+    padding: 30rem 0;
+
+    @include breakpoint(tab-port) {
+      padding: 18rem 0;
+
+    }
+    @include breakpoint(phone) {
+      padding: 8rem 0;
+    }
+
+
+  }
+
+  &__card {
+    background-color: rgba($color-grey-light-2, 0.8);
+    text-align: center;
+    padding: 4rem 3rem;
+    box-shadow: 0 2rem 2rem rgba(black, 0.1);
+    transition: all .3s;
+    border-radius: 3px;
+
+    &:hover {
+      transform: translateY(-1.6rem) scale(1.05);
+
+     
+    }
+
+    
+    @include breakpoint(tab-port) {
+      width: 93%;
+    }
+    
+    @include breakpoint(phone){
+      padding: $padding-top-bottom-small;
+      width: 85%;
+      margin: 0 auto;
+    }
+    @include breakpoint(phone-small){
+      padding: $padding-top-bottom-small;
+      width: 85%;
+      margin: 0 auto;
+    }
+
+   
+  }
+
+  .features__ico {
+    font-size: 6rem;
+    background-image: linear-gradient(to right, $color-primary, $color-primary-dark);
+    color: transparent;
+    padding: $padding-top-bottom;
+    
+    @supports (-webkit-background-clip: text) or (background-clip: text) {
+      -webkit-background-clip: text;
+      background-clip: text;
+
+    }
+  }
+
+  &__heading {
+    margin: $margin-top-bottom-small;
+  }
+
+  &__text {
+    margin: $margin-top-bottom-small;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+
+  @include breakpoint(phone) {
+    height: auto;
+    -webkit-clip-path: none;
+    clip-path: none; 
+    
+  }
+  @include breakpoint(phone-small) {
+    height: auto;
+    
+  }
+}
