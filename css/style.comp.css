@@ -44,21 +44,21 @@ html {
   @media only screen and (min-width: 160em) {
     html {
       font-size: 100%; } }
-  @media only screen and (max-width: 75em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
   @media only screen and (max-width: 75em) {
     html {
-      font-size: 55%; } }
+      font-size: 56.25%; } }
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
   @media only screen and (max-width: 37.5em) {
     html {
-      font-size: 45%; } }
+      font-size: 43.75%; } }
   @media only screen and (max-width: 22.5em) {
     html {
-      font-size: 36%; } }
+      font-size: 37.75%; } }
 
 body {
   box-sizing: border-box;
@@ -255,10 +255,10 @@ body {
     content: "";
     clear: both;
     display: table; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 75em) {
     .row {
-      max-width: 50rem; } }
-  @media only screen and (max-width: 37.5em) {
+      padding: 0 2rem; } }
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem; } }
   .row [class^="col"] {
@@ -268,6 +268,9 @@ body {
         margin-bottom: 4rem; } }
     .row [class^="col"]:not(:last-child) {
       margin-right: 6rem; }
+      @media only screen and (max-width: 56.25em) {
+        .row [class^="col"]:not(:last-child) {
+          margin-right: 0; } }
 
 .col-1-of-2 {
   width: calc((100% - 6rem) / 2); }
@@ -513,7 +516,7 @@ body {
 .about__picture--2 {
   position: absolute;
   top: 4rem;
-  right: 0; }
+  right: 2rem; }
   @media only screen and (max-width: 56.25em) {
     .about__picture--2 {
       z-index: 1;
@@ -524,7 +527,7 @@ body {
 .about__picture--3 {
   position: absolute;
   top: 12.5rem;
-  right: 23%; }
+  right: 27%; }
   @media only screen and (max-width: 56.25em) {
     .about__picture--3 {
       top: 1.5rem;
@@ -867,7 +870,6 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 55%, transparent 55%, transparent 100%), url(../img/nat-10-3.jpg);
   background-size: cover;
   background-position: center;
-  width: 95%;
   margin: 0 auto;
   padding: 2rem 0;
   box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.4);
@@ -886,7 +888,6 @@ body {
       height: auto; } }
 
 .form {
-  height: 55rem;
   width: 50%;
   padding-left: 5rem; }
   @media only screen and (max-width: 56.25em) {
@@ -908,7 +909,7 @@ body {
   .form__text {
     outline: none;
     border: none;
-    line-height: 3.5rem;
+    line-height: 4rem;
     width: 95%;
     padding-left: 2rem;
     border-bottom: 3px solid transparent;
@@ -941,9 +942,9 @@ body {
   .form__email {
     position: relative; }
   .form__radio-1 {
+    float: left;
     display: inline-block;
     width: 50%;
-    float: left;
     margin: 2rem 0;
     position: relative; }
     @media only screen and (max-width: 56.25em) {
@@ -961,36 +962,32 @@ body {
   .form__radio-btn {
     display: none; }
     .form__radio-btn:checked ~ label::after {
-      background-color: #00c2cc; }
+      opacity: 1; }
   .form__radio-label {
     display: block;
     margin-left: 4rem;
-    width: 100%; }
-    .form__radio-label::before {
+    width: 100%;
+    cursor: pointer; }
+    .form__radio-label::before, .form__radio-label::after {
       content: "";
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: 1.5rem; }
+    .form__radio-label::before {
       width: 3rem;
       height: 3rem;
-      border-radius: 50%;
-      display: inline-block;
-      background: transparent;
       border: 0.6rem solid #00c2cc;
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(-50%, -20%);
-      margin-left: 1.5rem; }
+      transform: translate(-50%, -20%); }
     .form__radio-label::after {
-      content: "";
-      width: 1.3rem;
       height: 1.3rem;
-      border-radius: 50%;
-      display: inline-block;
-      background: transparent;
-      position: absolute;
-      top: 0;
-      left: 0;
+      width: 1.3rem;
       transform: translate(-50%, 20%);
-      margin-left: 1.5rem; }
+      background-color: #00c2cc;
+      opacity: 0;
+      transition: opacity .4s; }
   .form-btn {
     margin: 4rem auto; }
 

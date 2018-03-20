@@ -14,20 +14,20 @@ html {
     font-size: 100%;
   }
 
-  @include breakpoint(tab-land) {
+  @include breakpoint(large) {
     font-size: 75%;
   }
   @include breakpoint(tab-land) {
-    font-size: 55%;
+    font-size: 56.25%;
   }
   @include breakpoint(tab-port) {
     font-size: 50%;
   }
   @include breakpoint(phone) {
-    font-size: 45%;
+    font-size: 43.75%;
   }
   @include breakpoint(phone-small) {
-    font-size: 36%;
+    font-size: 37.75%;
   }
 }
 
