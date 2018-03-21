@@ -24,7 +24,9 @@
 	<!-- header starts here -->
 	<header class="header">
 
-		<img class="header__logo" src="./img/logo-white.png" alt="logo">
+		<a class="header__logo-link" href="https://j-dawg22.github.io/Natours/">
+			<img class="header__logo" src="./img/logo-white.png" alt="logo">
+		</a>
 
 		<div class="header__text">
 			<h1>
@@ -35,11 +37,9 @@
 					IS WHERE LIFE HAPPENS
 				</span>
 			</h1>
-			<button class="header__button button-primary">
-				<a href="#">
-					discover our tours
-				</a>
-			</button>
+			<a class="header__button button-primary" href="#">
+				<span>discover our tours</span>
+			</a>
 		</div>
 
 	</header>
@@ -90,7 +90,7 @@
 		<!-- about section starts here -->
 
 		<section class="section-about">
-			<div class="middle-4r-margin">
+			<div class="about__heading-div middle-4r-margin">
 				<h3 class="heading-tertiary">exciting tours for adventurous people</h3>
 			</div>
 
@@ -110,17 +110,16 @@
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa, dolor et error nostrum est hic aut quas obcaecati.
 						</p>
 					</div>
-					<button class="about__btn button-secondary">
-						<a href="#">Learn more &rarr;</a>
-					</button>
+					<a class="about__btn button-secondary" href="#">
+						<span>Learn more &rarr;</span>
+					</a>
 
 				</div>
 				<div class="col-1-of-2">
 					<div class="about__img-holder">
 
 						<picture>
-							<!-- <source srcset="./img/nat-1-300.jpg 300w, ./img/nat-1-large.jpg 1000w" sizes="(max-width: 900px) 22vw, " src="./img/nat-1-300.jpg"
-							 alt="exciting-tours"> -->
+
 							<source alt="excitting-tours" sizes="(max-width: 75em) 22vw, (max-width: 56.25em) 18vw" srcset="./img/nat-1-800.jpg 800w,
 								 ./img/nat-1-large.jpg 1000w,
 								 ./img/nat-1-150.jpg 150w,
@@ -217,7 +216,7 @@
 				<div class="row">
 					<div class="col-1-of-3">
 						<div class="card__holder">
-							<div class="card__front card__front-back-cc">
+							<div class="card__front">
 								<div class="card__front-top card__front-top--1">
 									<div class="card__front-heading-div">
 										<span class="card__front-heading card__front-heading--1">the sea explorer</span>
@@ -233,16 +232,14 @@
 									</ul>
 								</div>
 							</div>
-							<div class="card__back card__back--1 card__front-back-cc">
+							<div class="card__back card__back--1">
 								<div class="card__back-content">
 									<span class="card__back-only">Only</span>
 									<span class="card__back-price">$297</span>
 								</div>
-								<button class="card__back-button button-primary">
-									<a href="#subscribe">
-										book now!
-									</a>
-								</button>
+								<a class="card__back-button button-primary" href="#subscribe">
+									<span>book now!</span>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -269,11 +266,9 @@
 									<span class="card__back-only">Only</span>
 									<span class="card__back-price">$497</span>
 								</div>
-								<button class="card__back-button button-primary">
-									<a href="#subscribe">
-										book now!
-									</a>
-								</button>
+								<a class="card__back-button button-primary" href="#subscribe">
+									<span>book now!</span>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -300,21 +295,17 @@
 									<span class="card__back-only">Only</span>
 									<span class="card__back-price">$897</span>
 								</div>
-								<button class="card__back-button button-primary">
-									<a href="#subscribe">
-										book now!
-									</a>
-								</button>
+								<a class="card__back-button button-primary" href="#subscribe">
+									<span>book now!</span>
+								</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<button class="card__button middle-4r-margin button-tertiary">
-				<a href="#">
-					discover all tours
-				</a>
-			</button>
+			<a class="card__button middle-4r-margin button-tertiary" href="#">
+				<span>discover all tours</span>
+			</a>
 
 		</section>
 
@@ -327,16 +318,14 @@
 				<div class="sub__pic-div">
 					<div class="sub__img-parent">
 						<picture>
-							<source srcset="./img/nat-8-230.jpg 1x, ./img/nat-8-460.jpg 2x, ./img/nat-8-690.jpg 3x" media="(max-width: 37.5em)" alt="row row row your boat... ">
-							<source srcset="./img/nat-8-330.jpg 1x, ./img/nat-8-660.jpg 2x, ./img/nat-8-900.jpg 3x" media="(max-width: 75em)" alt="row row row your boat... ">
-							<img class="sub__img " src="./img/nat-8-900.jpg " alt="row row row your boat... ">
+							<source srcset="./img/nat-8-270.jpg 1x, ./img/nat-8-460.jpg 2x, ./img/nat-8-540.jpg 3x" media="(max-width: 75em)" alt="row row row your boat">
+							<img class="sub__img " src="./img/nat-8-900.jpg " alt="row row row your boat">
 						</picture>
 					</div>
 					<div class="sub__img-parent ">
 						<picture>
-							<source srcset="./img/nat-9-230.jpg 1x, ./img/nat-9-460.jpg 2x, ./img/nat-9-690.jpg 3x" media="(max-width: 37.5em)" alt="row row row your boat... ">
-							<source srcset="./img/nat-9-330.jpg 1x, ./img/nat-9-660.jpg 2x, ./img/nat-9-900.jpg 3x" media="(max-width: 75em)" alt="row row row your boat... ">
-							<img class="sub__img " src="./img/nat-9-900.jpg " alt="row row row your boat... ">
+							<source srcset="./img/nat-9-270.jpg 1x, ./img/nat-9-460.jpg 2x, ./img/nat-9-540.jpg 3x" media="(max-width: 75em)" alt="A mervelous view">
+							<img class="sub__img " src="./img/nat-9-900.jpg " alt="A marvelous view">
 						</picture>
 					</div>
 				</div>
@@ -360,11 +349,9 @@
 						</div>
 					</div>
 					<div class="sub-btn ">
-						<button class="sub__button button-tertiary ">
-							<a href="# ">
-								book now
-							</a>
-						</button>
+						<a class="sub__button button-tertiary " href="# ">
+							<span>book now</span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -435,9 +422,9 @@
 					</div>
 				</div>
 				<div class="middle ">
-					<button class="story__btn button-secondary ">
-						<a href="# "> Read all stories &rarr;</a>
-					</button>
+					<a class="story__btn button-secondary" href="# ">
+						<span>Read all stories &rarr;</span>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -477,11 +464,9 @@
 						</div>
 
 						<div class="form-btn ">
-							<button class="form__button button-tertiary ">
-								<a href="# ">
-									next step &rarr;
-								</a>
-							</button>
+							<a class="form__button button-tertiary" href="# ">
+								<span>next step &rarr;</span>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -522,7 +507,10 @@
 					</div>
 					<div class="col-1-of-2 ">
 						<div class="footer__right ">
-							Built by Jahangir Alam for his own interest. Original design was done by
+							Built by
+							<a class="footer__jonas " target="_blank " href="https://j-dawg22.github.io/Natours/">
+								<span class="footer__designed-text text-on-hover ">Jahangir Alam</span>
+							</a> for his own interest. Original design was done by
 							<a class="footer__jonas " target="_blank " href="https://github.com/jonasschmedtmann ">
 								<span class="footer__designed-text text-on-hover ">JONAS SCHMEDTMANN</span>
 							</a> for his online course
@@ -538,38 +526,6 @@
 	</section>
 	<!-- footer section ends here -->
 
-	<!-- grid design starts here-->
-
-	<!-- <div class="row ">
-			<div class="col-1-of-2 ">col-1-of-2</div>
-			<div class="col-1-of-2 ">col-1-of-2</div>
-		</div>
-		<div class="row ">
-			<div class="col-1-of-3 ">col-1-of-3</div>
-			<div class="col-1-of-3 ">col-1-of-3</div>
-			<div class="col-1-of-3 ">col-1-of-3</div>
-		</div>
-		<div class="row ">
-			<div class="col-2-of-3 ">col-2-of-3</div>
-			<div class="col-1-of-3 ">col-1-of-3</div>
-		</div>
-		<div class="row ">
-			<div class="col-1-of-4 ">col-1-of-4</div>
-			<div class="col-1-of-4 ">col-1-of-4</div>
-			<div class="col-1-of-4 ">col-1-of-4</div>
-			<div class="col-1-of-4 ">col-1-of-4</div>
-		</div>
-		<div class="row ">
-			<div class="col-2-of-4 ">col-2-of-4</div>
-			<div class="col-1-of-4 ">col-1-of-4</div>
-			<div class="col-1-of-4 ">col-1-of-4</div>
-		</div>
-		<div class="row ">
-			<div class="col-3-of-4 ">col-3-of-4</div>
-			<div class="col-1-of-4 ">col-1-of-4</div>
-		</div> -->
-
-	<!-- grid design ends here -->
 
 </body>
 

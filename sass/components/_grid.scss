@@ -9,13 +9,17 @@
     padding: 0 2rem;
 
   }
-
-
+  
+  
   @include breakpoint(tab-port) {
     max-width: 50rem;
+    
+  }
+  
+  @include breakpoint(phone-small) {
+    padding: 0 1.2rem;
 
   }
-
 
 
   [class^="col"] {
@@ -63,7 +67,6 @@
 
 .col-1-of-4 {
   width: calc((100% - #{$gutter-vertical-small} * 3) / 4);
-  // background-color: darkkhaki;
 
   @include breakpoint(tab-port) {
     width: 100%;
@@ -74,7 +77,6 @@
   width: calc(
     ((100% - #{$gutter-vertical-small} * 3) / 4) * 2 + #{$gutter-vertical-small}
   );
-  background-color: fuchsia;
 }
 
 .col-3-of-4 {
@@ -82,5 +84,4 @@
     ((100% - #{$gutter-vertical-small} * 3) / 4) * 3 + #{$gutter-vertical-small} *
       2
   );
-  background-color: goldenrod;
 }

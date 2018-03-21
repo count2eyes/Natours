@@ -1,39 +1,45 @@
 .button-primary {
-	text-transform: uppercase;
-	background-color: $color-grey-light-1;
-	//color: $color-grey-dark;
-	padding: 1.8rem 4rem;
-	border-radius: 100rem;
-	outline: none;
-	border: none;
-	margin: 4rem auto;
-	position: relative;
-	transition: all .3s;
-	animation: to-up .5s;
 
-	& > a {
-		text-decoration: none;
-		color: red;//$color-grey-dark;
+	
+	& > span {
+		display: block;
+		background-color: $color-grey-light-1;
+		padding: 1.8rem 4rem;
+		border-radius: 100rem;
+		overflow: hidden;
+		transition: transform .3s;
 
-		&:visited,
-		&:link {
-			color: $color-grey-dark;
-
+		&:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 1rem 2rem rgba(black, .4);
+	
 		}
 	}
-
-	&:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 1rem 2rem rgba(black, .2);
-		cursor: pointer;
+	
+	&:visited,
+	&:link {
+		color: $color-grey-dark;
+		display: inline-block;
+		text-transform: uppercase;
+		margin: 4rem auto;
+		position: relative;
+		text-decoration: none;
+		border-radius: 100rem;
 
 	}
+	
+
 
 	&:hover::after {
-		transform: scale(1.5);
+		transform: scaleX(2) scaleY(1.7);
 		background-color: $color-grey-light-1;
 		transition: all .3s;
 		opacity: 0;
+	
+		@include breakpoint(phone-small) {
+			transform: scale(1);
+		
+	}
 	
 	}
 
@@ -47,57 +53,53 @@
 		left: 0;
 		z-index: -1;
 		border-radius: 100rem;
-		outline: none;
-		border: none;
+		overflow: hidden;
+		opacity: 1;
 	}
 
-	@include breakpoint(phone-small) {
-		font-size: 2.5rem;
-		padding: 1.3rem 3rem;
-	}
+		
+
 }
 
 
 .button-secondary {
-	text-decoration: none;
-	outline: none;
-	border: none;
-	border-bottom: 1px solid $color-primary;
-	background: none;
-	padding: .5rem 4px;
-	transition: all .3s;
-	font-size: 1.6rem;
-	line-height: 1.7;  
 
 	
-	& > a {
-		color: red;//$color-primary;
-		text-decoration: none;
-		
-		&:link,
-		&:visited {
-			color: $color-primary;
-			text-decoration: none;
-
-		}
+	&:hover > span {
+		color: $color-white;
+	}
+	
+	& > span {
+		display: block;
+		padding: .5rem 4px;
+		color: $color-primary;
+		border-bottom: 1px solid $color-primary;
+		transition: all .3s;
 
 		&:hover {
-			color: $color-white; 
-	
+			background-color: $color-primary;
+			transform: translateY(-3px);
+			box-shadow: 0 .5rem 1rem rgba(black, .2);
 		}
 	}
+
 	
-	&:hover {
-		cursor: pointer;
-		background-color: $color-primary;
-		transform: translateY(-3px);
-		box-shadow: 0 .5rem 1rem rgba(black, .2);
-		
+	&:link,
+	&:visited {
+		color: currentColor;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.6rem;
+		line-height: 1.7;  
 	}
-	&:hover > a {
-		color: $color-white;
+
+	&:hover {
+		color: $color-white; 
 
 	}
+
+	
+
 
 	@include breakpoint(phone-small){
 	}
@@ -105,47 +107,48 @@
 }
 
 .button-tertiary {
-	//font-size: 1.6rem;
-	text-transform: uppercase;
-	background-color: $color-primary;
-//	color: $color-white;
-	padding: 1.8rem 4rem;
-	border-radius: 100rem;
-	outline: none;
-	border: none;
-	position: relative;
-	transition: all .3s;
-	animation: to-up .5s;
-	font-size: inherit;
 
-	& > a {
+	
+	&:visited,
+	&:link {
+		color: $color-primary;
 		text-decoration: none;
-		color: red;//$color-white;
-
-		&:visited,
-		&:link {
-			color: $color-white;
-
-		}
+		display: inline-block;
+		text-transform: uppercase;
+		margin: 0 auto;
+		position: relative;
+		border-radius: 100rem;
 	}
 
+	
+	& > span {
+		display: block;
+		background-color: $color-primary;
+		padding: 1.8rem 4rem;
+		border-radius: 100rem;
+		color: $color-white;
+		overflow: hidden;
+		transition: all .3s;
+		
+	}
+	
 	&:hover {
 		transform: translateY(-3px);
-		box-shadow: 0 1rem 2rem rgba(black, .2);
-		cursor: pointer;
+		box-shadow: 0 1rem 2rem rgba(black, .4);
 
 	}
 
 	&:hover::after {
-		transform: scale(1.5);
-		background-color: $color-primary;
+		transform: scaleX(1.5) scaleY(1.8);
 		transition: all .3s;
 		opacity: 0;
-	
-	}
+		
 
+	}
+	
 	&::after {
 		content: "";
+		background-color: $color-primary;
 		display: block;
 		height: 100%;
 		width: 100%;
@@ -154,10 +157,7 @@
 		left: 0;
 		z-index: -1;
 		border-radius: 100rem;
-		outline: none;
-		border: none;
+		overflow: hidden;
 	}
 
-	@include breakpoint(phone-small){
-	}
 }

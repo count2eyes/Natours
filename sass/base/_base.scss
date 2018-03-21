@@ -26,9 +26,9 @@ html {
   @include breakpoint(phone) {
     font-size: 43.75%;
   }
-  @include breakpoint(phone-small) {
-    font-size: 37.75%;
-  }
+  // @include breakpoint(phone-small) {
+  //   font-size: 31.25%;
+  // }
 }
 
 body {
@@ -36,8 +36,8 @@ body {
   font-size: 1.6rem;
   color: rgba($color-grey-dark, .95);
   font-family: 'Lato', sans-serif;
-  padding: 2.5rem;
   background-color: $color-grey-light-2;
+  //overflow-X: hidden;
 }
 
 ::selection {

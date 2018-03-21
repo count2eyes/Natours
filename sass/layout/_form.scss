@@ -1,9 +1,7 @@
 .section-form {
   padding: 5rem 0;
   background-image: linear-gradient(to bottom right, $color-primary-light, $color-primary-dark);
-  //height: 65rem;
   @include breakpoint(tab-port) {
-    //padding: 5rem 0;
   }
 }
 
@@ -11,7 +9,6 @@
   background-image: linear-gradient(105deg, rgba($color-white, .8) 55%, transparent 55% , transparent 100%), url(../img/nat-10-3.jpg);
   background-size: cover;
   background-position: center;
-  //width: 95%;
   margin: 0 auto;
   padding: 2rem 0;
   box-shadow: 0 1rem 4rem rgba(black, .4);
@@ -78,26 +75,20 @@
   &__text {
     outline: none;
     border: none;
-    line-height: 4rem;
+    font-size: 1.6rem;
     width: 95%;
-    padding-left: 2rem;
+    padding: 1.7rem 0 calc(1.7rem - 3px) 2rem; 
     border-bottom: 3px solid transparent;
     margin: $margin-top-bottom-smaller;
     color: inherit;
 
     &::-webkit-input-placeholder {
-      color: rgba($color-grey-dark, .8);
-      font-size: 1.6rem;
-
-      @include breakpoint(phone) {
-      }
-      
-      &::input-placeholder {
-        color: rgba($color-grey-dark, .6);
-          
-
+      color: rgba($color-grey-dark, .6);
+     
     }
 
+    &::input-placeholder {
+      color: rgba($color-grey-dark, .6);  
     }
     
     @include breakpoint(tab-port) {

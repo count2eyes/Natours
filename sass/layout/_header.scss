@@ -20,7 +20,7 @@
 	(-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em){
 		background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.7)), url(../img/hero.jpg);
 	}
-	
+
 	
 	&__logo {
 		height: 3.5rem;
@@ -45,7 +45,9 @@
 	}
 	
 	&__button {
-		
+		animation: to-up .3s;
+
+		display: inline-block;
 	}
 
 	@include breakpoint(phone) {

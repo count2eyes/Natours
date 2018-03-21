@@ -13,7 +13,6 @@
     backdrop-filter: blur(5px);
     background: rgba($color-black, 0.3);
 
-    //backdrop-filter to be tested on ios safari
   }
 
   &:target {
@@ -33,7 +32,8 @@
 
 
 .sub {
-  width: 70vw;
+  width: 70%;
+  max-height: 90%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -41,18 +41,25 @@
   background: $color-white; 
   visibility: hidden;
   transition: all .7s;
+  overflow: auto;
+
+  @include breakpoint(tab-land) {
+    height: 80%;
+  }
 
   @include breakpoint(tab-port) {
-    height: auto;
+    width: 80%;
   }
   
   &__pic-div {
     width: 33.33%;
+    height: 100%;
     float: left;
-    @include clearfix;
+
+
     
     @include breakpoint(tab-port) {
-      height: 60%;
+      height: 30rem;
       float: none;
       width: 100%;
     }
@@ -60,13 +67,14 @@
 
   &__img-parent {
     width: 100%;
-    height: 50%;
+    height: 40%;
+    overflow: hidden;
 
+    
     @include breakpoint(tab-port) {
+      height: 100%;
       width: 50%;
-      height: 25vh;
       float: left;
-      background: red;
     }
   }
   
@@ -74,8 +82,9 @@
     display: block;
     width: 100%;
     height: 100%;
+    -webkit-object-fit: cover;
     object-fit: cover;
-    overflow: hidden;
+
   }
   
   &__details {
@@ -114,10 +123,10 @@
       line-height: 1;
       font-size: 3rem;
       font-weight: 400;
+      z-index: 2;
 
       @include breakpoint(tab-port){
-        top: auto;
-        //bottom: 3rem;
+        top: 3rem;
         right: 3rem;
       }
   
